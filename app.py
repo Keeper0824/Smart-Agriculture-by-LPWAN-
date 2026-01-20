@@ -1025,7 +1025,7 @@ HTML_TEMPLATE = '''
             list.innerHTML = '';
             const chartSelect = document.getElementById('chart-device-select');
             if (chartSelect.options.length === 0) {
-                 sensors.slice(0, 10).forEach(s => {
+                 sensors.forEach(s => {
                     const opt = document.createElement('option'); opt.value = s.id; opt.textContent = s.name;
                     chartSelect.appendChild(opt);
                  });
