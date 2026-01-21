@@ -666,7 +666,7 @@ def stream():
 def export_csv():
     output = io.StringIO()
     writer = csv.writer(output)
-    writer.writerow(['设备ID', '时间戳', '温度(°C)', '湿度(%)', '电量(%)', 'RSSI(dBm)', 'SNR(dB)'])
+    writer.writerow(['device_id', 'timestamp', 'temperature_c', 'humidity_pct', 'battery_pct', 'rssi_dbm', 'snr_db'])
     for t in telemetry_history[-200:]:
         writer.writerow(
             [t["device_id"], t["timestamp"], t["temperature"], t["humidity"], t["battery"], t["rssi"], t["snr"]])
